@@ -7,7 +7,7 @@ from typing import Optional
 import typer
 import yaml
 
-from agent_pack import __version__
+from agentpack import __version__
 
 app = typer.Typer(help="AI agent configuration manager.")
 

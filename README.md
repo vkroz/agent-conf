@@ -15,7 +15,7 @@ Multi-tool vendor-neutral configuration is a secondary benefit:
 ## Installation
 
 ```bash
-uv tool install git+https://github.com/numio-ai/agent-pack
+uv tool install git+https://github.com/numio-ai/agentpack
 ```
 
 ## Quick start
@@ -44,10 +44,7 @@ Given `agents: [claude, cursor]`:
 - `.agentpack/rules/*.md` -> `.claude/rules/*.md` and `.cursor/rules/*.md`
 - `.agentpack/skills/<name>/skill.md` -> `.claude/skills/<name>.md` and `.cursor/rules/<name>.md`
 
-## Documentation
+## Miscellaneous
 
 For more details, see `docs/user-guide.md`.
-
-## Contributing
-
-Contributions are welcome. Please read the [contributing guidelines](CONTRIBUTING.md) for more information.
+See also the [examples at agentpack-depot](https://github.com/numio-ai/agentpack-depot).

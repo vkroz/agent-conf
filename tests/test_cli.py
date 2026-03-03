@@ -2,7 +2,7 @@
 
 from typer.testing import CliRunner
 
-from agent_pack.cli import app
+from agentpack.cli import app
 
 runner = CliRunner()
 

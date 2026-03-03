@@ -1,6 +1,7 @@
-# Task Management Standard
-
-This document defines how project tasks are managed across all projects in the organization. It applies to all participants — human and AI agent alike.
+---
+description: Task management standard for all projects in the organization.
+alwaysApply: true
+---
 
 ## Task Lifecycle
 

@@ -10,8 +10,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/vkroz/agent-pack.git
-cd agent-pack
+git clone https://github.com/numio-ai/agentpack.git
+cd agentpack
 uv sync                    # creates .venv, installs all deps
 uv run agentpack --help    # verify CLI works
 ```
@@ -64,13 +64,13 @@ When `uv run agentpack` fails, run these commands in order to isolate the proble
 grep -A1 '\[project.scripts\]' pyproject.toml
 
 # 2. Can Python find and import the package?
-uv run python -c "import agent_pack; print(agent_pack.__version__)"
+uv run python -c "import agentpack; print(agentpack.__version__)"
 
 # 3. Can Python import the CLI module?
-uv run python -c "from agent_pack.cli import app; print('OK')"
+uv run python -c "from agentpack.cli import app; print('OK')"
 
 # 4. Does the module entrypoint work?
-uv run python -m agent_pack --help
+uv run python -m agentpack --help
 
 # 5. Force rebuild + reinstall the package
 uv sync --reinstall
@@ -144,11 +144,11 @@ end
 | Linter/formatter | Ruff (E, F, I rules) | `pyproject.toml [tool.ruff]` |
 | Test framework | pytest | `pyproject.toml [tool.pytest]` |
 | Build backend | hatchling | `pyproject.toml [build-system]` |
-| IDE workspace | `agent-pack.code-workspace` | repo root |
+| IDE workspace | `agentpack.code-workspace` | repo root |
 
 ## Version Management
 
-- Version lives in `pyproject.toml` → `[project.version]` and `src/agent_pack/__init__.py`
+- Version lives in `pyproject.toml` → `[project.version]` and `src/agentpack/__init__.py`
 - Follow semver (MAJOR.MINOR.PATCH)
 - Tag releases: `git tag v0.1.0 && git push --tags`
 

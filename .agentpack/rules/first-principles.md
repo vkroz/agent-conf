@@ -61,6 +61,12 @@ A proper plan MUST NOT contain:
 
 ### Example: Good vs Bad Requirements
 
+**Good** (requirement):
+> R1: Persistent EBS Volume
+> - One volume per host, named `{host}-data`
+> - Type: gp3, Size: 50 GB (configurable)
+> - Lifecycle: `prevent_destroy = true`
+
 **Bad** (implementation detail):
 ```
 Add this code to main.tf:
@@ -70,12 +76,6 @@ resource "aws_ebs_volume" "data" {
   ...
 }
 ```
-
-**Good** (requirement):
-> R1: Persistent EBS Volume
-> - One volume per host, named `{host}-data`
-> - Type: gp3, Size: 50 GB (configurable)
-> - Lifecycle: `prevent_destroy = true`
 
 ### Rationale
 - Plans outlive implementations - requirements remain valid even if implementation changes
